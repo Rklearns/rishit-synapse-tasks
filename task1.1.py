@@ -38,7 +38,7 @@ for i,j in permutation: #since tuple of the list has 2 elements in it therefore 
    continue  
 
   zippedlist=list(zip(list1,list2,percentlist))#ZIPS THE DJ PAIR AND ITS OVERLAPPING LIST
-  zippedlist.sort(key=lambda a:a[len(zippedlist)], reverse=True)#HERE USED LAMBDA FUNCTION AND INDEX
+  zippedlist.sort(key=lambda a:a[-1], reverse=True)#HERE USED LAMBDA FUNCTION AND INDEX
   #WILL START FROM THE LAST ELEMENT OF THE ZIPPED LIST TOH BASICALLY LAST INDEX OF TUPLE WILL BE SORTED 
   #IN DECREASING ORDER
 
