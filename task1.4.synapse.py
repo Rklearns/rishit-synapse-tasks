@@ -1,15 +1,15 @@
 def waiting(customers):
     waitingtime = []
     sum = 0
-    curr=0
+    free_time=0
 
     for arrival, prep in customers:
-        if arrival > curr:#if customer arrives after the current time then chef can prepare food at that time without delay
-            curr = arrival
-        wait = curr + prep - arrival#else chef will be free at curr time 
+        if arrival > free_time:#if customer arrives after the free time then chef can prepare food at that time without delay
+            free_time = arrival
+        wait = free_time + prep - arrival#else chef will be free at free_time 
         #to prepare and will take prep time
         waitingtime.append(wait)#indivdual waiting time is added in the list
-        curr = curr + prep
+        free_time = free_time + prep
 
     print("Therefore the individual waiting times are: ", waitingtime)
 
