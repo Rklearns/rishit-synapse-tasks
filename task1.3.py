@@ -21,11 +21,9 @@ request_spending = {
 
 def total_spending(request_spending, account_id: str, category: str): 
     transactions = request_spending[account_id]
-    total = 0
     for a in transactions['transactions']:#this means iterating over inside the transactions of the dictionary
         if a['category'] == category:#inside transactions checking which category is there
-            total = total+ a['amount']
-    return total
+            return a['amount']
 
 def account_balance(request_spending, account_id: str):
     
