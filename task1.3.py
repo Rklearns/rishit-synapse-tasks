@@ -53,7 +53,7 @@ def money_owed(request_spending, account_id: str):
 
 
 
-print("Total spending of Arham in creatives category is:",total_spending(request_spending, "Arham", "Stalls"))  
+print("Total spending of Arham in stalls category is:",total_spending(request_spending, "Arham", "Stalls"))  
 print("Account blance of Arham is:",account_balance(request_spending, "Arham"))              
 print("Money owed to Arham is:",money_owed(request_spending, "Arham"))
 
